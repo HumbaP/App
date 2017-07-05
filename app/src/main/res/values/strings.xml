@@ -2,9 +2,92 @@
     <string name="app_name">SISeI</string>
     <!--Facebook items-->
     <string name="facebook_app_id">207893816372453</string>
-    <string name="fb_login_protocol_scheme">fbAPP_ID</string>
+    <string name="fb_login_protocol_scheme">fb207893816372453</string>
     <string name="server_blood">https://bloodmprojects.com/SecretSXI/index.php/</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <!--NAVIGATION DRAWER-->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_us">Congreso</string>
+    <string name="nav_prizes">Premios</string>
+    <string name="nav_blog">Blog</string>
+    <string name="nav_contact">Contacto</string>
+    <string name="nav_logout">Cerrar Sesión</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <!--<item>Inicio</item-->
+        <item>Perfil</item>
+        <!--item>Congreso</item-->
+        <item>Premios</item>
+        <!--item>Blog</item>
+        <item>Contacto</item-->
+        <item>Cerrar Sesión</item>
+
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <!--UI en la aplicación-->
+    <string name="ui_decoder_header">Ingrese una palabra</string>
+    <string name="ui_decoder_button">Voy a tener suerte</string>
+
+    <string name="alert_title_won">¡Felicidades!</string>
+    <string name="alert_badge_won">¡Has ganado una insignia! </string>
+    <string name="alert_points_won_start">¡Has ganado  </string>
+    <string name="alert_points_won_end"> puntos!  </string>
+
+    <string name="alert_title_word_taken">Error</string>
+    <string name="dialog_word_already_taken">Ya has encontrado esta palabra</string>
+
+    <string name="dialog_word_not_available">Esta palabra no esta disponible, intenta mas tarde.</string>
+
+    <string name="toast_no_points">No tienes puntos</string>
+
+    <string name="alert_title_info">Información</string>
+
+
+    <!--Dialogs-->
+    <string name="alert_title_scanner_available">No disponible</string>
+    <string name="alert_scanner_available">Este QR no está disponible, intenta con otro.</string>
+
+    <string name="alert_title_scanner_wrong">QR no soportado</string>
+    <string name="alert_scanner_wrong">Este QR no es soportado, intenta con otro.</string>
+
+
+    <string name="alert_title_error">Error</string>
+    <string name="alert_error">Ha ocurrido un error, estamos trabajando en ello.</string>
+    <string name="alert_title_error_connection">Error de conexión</string>
+    <string name="alert_error_connection">Verifica si tienes conexión a internet.</string>
+    <string name="alert_error_login">Ha ocurrido un error al iniciar sesión, intenta mas tarde.</string>
+    <string name="alert_error_login_cancel">Se ha cancelado el inicio de sesión, intenta nuevamente.</string>
+
+    <!--Info-->
+    <string name="info_header_qr">Escáner de QR</string>
+    <string name="info_qr">Con esta herramienta podrás desbloquear insignias y ganar puntos.\n¡Busca los QR y participa!</string>
+    <string name="info_header_decoder">¡Gana premios!</string>
+    <string name="info_decoder">El decoder es un artilugio que te permite ganar puntos e insignias.\nIngresa una clave y descubre si es ganadora.\nPuedes encontrar claves ganadoras en nuestro portal web o en redes sociales.</string>
+
+    <!--Variables para las preferencias-->
+    <string name="shared_loggedin">LoggedIn</string>
+    <string name="shared_fbId">Fb_Id</string>
+    <string name="shared_name">Name</string>
+    <string name="shared_email">Email</string>
+    <string name="shared_master1">Key_One</string>
+    <string name="shared_master2">Key_Two</string>
+
 
 </resources>

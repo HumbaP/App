@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorNav">#3278B9</color>
+    <color name="pointsProfile">#FDD835</color>
+    <color name="badgesProfile">#26C6DA</color>
+    <color name="startGradient">#E0E0E0</color>
+    <color name="endGradient">#616161</color>
+    <color name="background">#E6E6E6</color>
+    <color name="azulClaro">#2A81C1</color>
+    <color name="azulFuerte">#3278b9</color>
+    <color name="orange">#FFA806</color>
 </resources>

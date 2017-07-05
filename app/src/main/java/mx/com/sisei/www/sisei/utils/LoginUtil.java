@@ -21,6 +21,7 @@ public class LoginUtil {
         datajson[2]= array.getInt(4)-valorRandom-(valorRandom2*4);//mes
         datajson[3]= array.getInt(5)-valorRandom-(valorRandom2*5);//Num_secret
         datajson[4]= array.getInt(array.length()-1)-valorRandom-valorRandom2;//status
+
     }
 
     public static int generateKeyOne(String fbId){
@@ -40,5 +41,7 @@ public class LoginUtil {
     public static boolean isOnline(){
         return datajson[4]==1;
     }
+
+
 
 }

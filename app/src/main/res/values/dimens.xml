@@ -1,5 +1,32 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="nav_header_mini_spacing">10dp</dimen>
+
+    <!--Image sizes-->
+    <dimen name="image_mini_list">48dp</dimen>
+    <dimen name="profile_width">75dp</dimen>
+    <dimen name="profile_height">75dp</dimen>
+    <dimen name="avatar_size">40dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="big_icon_size">150dp</dimen>
+    <dimen name="med_icon_size">100dp</dimen>
+    <dimen name="mini_icon_size">25dp</dimen>
+    <dimen name="profile_image_width">120dp</dimen>
+    <dimen name="small_icon_size">60dp</dimen>
+    <!--Card sizes-->
+    <dimen name="card_mini_size">180dp</dimen>
+    <dimen name="decoder_width">250dp</dimen>
+    <dimen name="decoder_height">350dp</dimen>
+    <!--Divs sisez-->
+    <dimen name="profile_gradient_banner_heigth">100dp</dimen>
+    <dimen name="profile_banner_heigth">200dp</dimen>
+    <dimen name="profile_point_heigth">150dp</dimen>
 </resources>
