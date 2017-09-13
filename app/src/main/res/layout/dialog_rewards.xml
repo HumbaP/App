@@ -10,7 +10,7 @@
         android:id="@+id/image_reward"
         android:layout_width="@dimen/med_icon_size"
         android:layout_height="@dimen/med_icon_size"
-        android:src="@drawable/splash_screen" />
+        android:src="@drawable/reward_predef" />
 
     <TextView
         android:paddingTop="@dimen/nav_header_vertical_spacing"
