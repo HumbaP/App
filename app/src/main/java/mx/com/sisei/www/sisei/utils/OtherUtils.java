@@ -68,7 +68,7 @@ public class OtherUtils {
             if(jsonObject.get("Puntos_Ganado")!=null){
                 View view =context.getLayoutInflater().inflate(R.layout.dialog_rewards,null);
                 ImageView reward=(ImageView) view.findViewById(R.id.image_reward);
-                Picasso.with(context).load(R.drawable.puntoss).into(reward);
+                Picasso.with(context).load(R.drawable.puntos).into(reward);
                 puntos=new AlertDialog.Builder(context).setTitle(context.getString(R.string.alert_title_won));
                 puntos.setView(view);
                 ((TextView) view.findViewById(R.id.text_reward)).setText(ContextSingleton.getApplicationContext().getString(R.string.alert_points_won_start)+" "+jsonObject.getJSONArray("Puntos_Ganado").getJSONObject(0).getString("Cantidad")+" "+ContextSingleton.getApplicationContext().getString(R.string.alert_points_won_end));

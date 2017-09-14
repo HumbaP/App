@@ -56,7 +56,7 @@ public class LoginActivity extends FragmentActivity {
         callbackManager = CallbackManager.Factory.create();
         if (AccessToken.getCurrentAccessToken() != null && SavingUtils.isLoggedIn()) {
             Profile.fetchProfileForCurrentAccessToken();
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivity2.class);
             startActivity(intent);
             finish();
         } else {
@@ -203,7 +203,7 @@ public class LoginActivity extends FragmentActivity {
                         jsonObject= new JSONObject(response.body().string());
                         if(jsonObject.getString("Error").equals("ALL_OK")){
                             SavingUtils.saveSession(jsonObject);
-                            Intent i = new Intent(LoginActivity.this,MainActivity.class);
+                            Intent i = new Intent(LoginActivity.this,MainActivity2.class);
                             startActivity(i);
                             finish();
                         }else{
