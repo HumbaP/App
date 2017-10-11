@@ -29,4 +29,5 @@
     <dimen name="profile_gradient_banner_heigth">100dp</dimen>
     <dimen name="profile_banner_heigth">200dp</dimen>
     <dimen name="profile_point_heigth">150dp</dimen>
+    <dimen name="bottom_nav">50dp</dimen>
 </resources>
