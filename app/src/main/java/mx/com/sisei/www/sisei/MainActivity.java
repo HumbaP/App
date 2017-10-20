@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                 return outfrag;
             */case 0:
                 loadHomeOnBackPress=false;
-                outfrag=new ProfileFragment().newInstance();
+//                outfrag=new ProfileFragment().newInstance();
                 APIService apiService= APIClient.getClient(this.getString(R.string.server_blood)).create(APIService.class);
                 Call<ResponseBody> call = apiService.me(SavingUtils.preferences.getString(getString(R.string.shared_fbId),""),SavingUtils.preferences.getString(getString(R.string.shared_master1),""),SavingUtils.preferences.getString(getString(R.string.shared_master2),""));
                 Log.d(TAG, "getHomeFragment: "+call.request().url().toString());

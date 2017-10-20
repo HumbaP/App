@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/decoder_height"
+    android:padding="10dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card_workshop">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".4"
+                    android:id="@+id/item_workshop_background"
+                    android:background="@color/badgesProfile"
+                    />
+
+                <FrameLayout
+                    android:id="@+id/item_workshop_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".6">
+
+                    <TextView
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:textSize="20sp"
+                        android:id="@+id/item_workshop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <LinearLayout
+                        android:id="@+id/item_workshop_icons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:orientation="horizontal"
+     >
+
+                        <Button
+                            android:text="XX/XX"
+                            android:id="@+id/bottom_join_icon"
+                            android:drawableLeft="@drawable/ic_person_add_black_24dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/item_workshop_logo"
+                android:layout_marginBottom="@dimen/conference_image_bottom_padding"
+                android:layout_gravity="center"
+
+                android:layout_width="@dimen/med_icon_size"
+                android:layout_height="@dimen/med_icon_size"
+                />
+
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

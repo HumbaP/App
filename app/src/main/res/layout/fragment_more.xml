@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mx.com.sisei.www.sisei.fragments.MoreFragment"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <Button
+        android:gravity="center"
+        android:text="Patrocinadores"
+        android:drawableLeft="@drawable/ic_card_membership_black_24dp"
+        android:id="@+id/button_sponsors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:gravity="center"
+        android:text="Otro"
+        android:drawableLeft="@drawable/ic_card_membership_black_24dp"
+        android:id="@+id/button_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -13,4 +13,5 @@
     <color name="azulFuerte">#3278b9</color>
     <color name="orange">#FFA806</color>
     <color name="white">#FFFFFF</color>
+    <color name="backgroundColor">#EEEEEE</color>
 </resources>

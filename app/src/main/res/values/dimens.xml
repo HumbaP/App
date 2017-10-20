@@ -30,4 +30,14 @@
     <dimen name="profile_banner_heigth">200dp</dimen>
     <dimen name="profile_point_heigth">150dp</dimen>
     <dimen name="bottom_nav">50dp</dimen>
+    <dimen name="conference_image_bottom_padding">20dp</dimen>
+
+    <!--Conferences sizes-->
+    <dimen name="fragment_conference_combined_layout">250dp</dimen>
+    <dimen name="fragment_conference_background">300dp</dimen>
+    <dimen name="fragment_conference_logo">200dp</dimen>
+    <dimen name="fragment_conference_image_top_margin">-80dp</dimen>
+    <dimen name="text_conference_title">25sp</dimen>
+    <dimen name="text_conference_desc">20sp</dimen>
+
 </resources>

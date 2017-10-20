@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import mx.com.sisei.www.sisei.DecoderActivity;
 import mx.com.sisei.www.sisei.R;
 import mx.com.sisei.www.sisei.ScannerActivity;
+import mx.com.sisei.www.sisei.listeners.MCallback;
 import mx.com.sisei.www.sisei.utils.OtherUtils;
 
 import static android.app.Activity.RESULT_OK;
@@ -29,17 +31,17 @@ import static android.app.Activity.RESULT_OK;
  * create an instance of this fragment.
  */
 public class PrizesFragment extends Fragment {
-    private OnFragmentInteractionListener mListener;
 
     private static final String TAG="PrizesFragment";
 
+    MCallback callback;
     public PrizesFragment() {
         // Required empty public constructor
     }
 
-    public static PrizesFragment newInstance(String param1, String param2) {
+    public static PrizesFragment newInstance(MCallback callback) {
         PrizesFragment fragment = new PrizesFragment();
-
+        fragment.callback=callback;
         return fragment;
     }
 
@@ -80,12 +82,6 @@ public class PrizesFragment extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Context context) {
@@ -96,7 +92,6 @@ public class PrizesFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
     }
 
     /**
@@ -147,5 +142,11 @@ public class PrizesFragment extends Fragment {
                 break;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(false);
     }
 }

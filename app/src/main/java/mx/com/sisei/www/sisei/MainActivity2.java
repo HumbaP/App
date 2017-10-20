@@ -1,9 +1,11 @@
 package mx.com.sisei.www.sisei;
 
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,9 +13,16 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
+import mx.com.sisei.www.sisei.fragments.EventFragment;
+import mx.com.sisei.www.sisei.fragments.HomeFragment;
+import mx.com.sisei.www.sisei.fragments.MoreFragment;
+import mx.com.sisei.www.sisei.fragments.MyQrFragment;
+import mx.com.sisei.www.sisei.fragments.PrizesFragment;
+import mx.com.sisei.www.sisei.fragments.ProfileFragment;
 import mx.com.sisei.www.sisei.fragments.RankFragment;
+import mx.com.sisei.www.sisei.listeners.MCallback;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements MCallback{
     private static String TAG="MainActivity";
     BottomNavigationView bottomMenu;
     private Toolbar toolbar;
@@ -39,36 +48,36 @@ public class MainActivity2 extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.profile:
-                        Fragment rank= RankFragment.newInstance();
-                        changeFragment(rank,"Perfil");
+                        Fragment profile= ProfileFragment.newInstance(MainActivity2.this);
+                        changeFragment(profile,"Profile1");
                         Log.d(TAG,"Profile Pressed");
 
                         break;
                     case R.id.event:
 
-                        Fragment event= RankFragment.newInstance();
-                        changeFragment(event,"Evento");
+                        Fragment event= EventFragment.newInstance(MainActivity2.this);
+                        changeFragment(event,"Event1");
                         Log.d(TAG,"Event Pressed");
 
                         break;
                     case R.id.home:
 
-                        Fragment home= RankFragment.newInstance();
-                        changeFragment(home,"Inicio");
+                        Fragment home= HomeFragment.newInstance(MainActivity2.this);
+                        changeFragment(home,"Home1");
                         Log.d(TAG,"Home Pressed");
 
                         break;
                     case R.id.prizes:
 
-                        Fragment prizes= RankFragment.newInstance();
-                        changeFragment(prizes,"Premios");
+                        Fragment prizes= PrizesFragment.newInstance(MainActivity2.this);
+                        changeFragment(prizes,"Prizes1");
                         Log.d(TAG,"prizes Pressed");
 
                         break;
                     case R.id.about:
 
-                        Fragment about= RankFragment.newInstance();
-                        changeFragment(about,"Mas");
+                        Fragment about= MoreFragment.newInstance(MainActivity2.this);
+                        changeFragment(about,"More1");
                         Log.d(TAG,"about Pressed");
 
                         break;
@@ -79,6 +88,9 @@ public class MainActivity2 extends AppCompatActivity {
         if(ACTIVE_FRAME==2){
              bottomMenu.getMenu().getItem(2).setChecked(true);
         }
+        Fragment home= HomeFragment.newInstance(this);
+        changeFragment(home,"Home1");
+
     }
 
     void changeFragment(final Fragment toChange, final String tag){
@@ -100,4 +112,51 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.home_button:
+                this.onBackPressed();
+                break;
+            default:
+                Log.d(TAG,"Something happened");
+        }
+
+        return true;
+    }
+
+    @Override
+    public void addFragment(Fragment fragment) {
+        FragmentManager fm = getSupportFragmentManager();
+
+        fm.beginTransaction().setCustomAnimations(android.R.anim.fade_in,
+                android.R.anim.fade_out).add(R.id.frame, fragment,fragment.getTag()).addToBackStack(fragment.getTag()).commit();
+        Log.d(TAG,"Fragment changed to "+fragment.getClass());
+
+    }
+
+    @Override
+    public void removeFragment(Fragment f) {
+        FragmentManager fm=getSupportFragmentManager();
+        fm.beginTransaction().remove(f).commit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        FragmentManager fm = getSupportFragmentManager();
+        if (fm.getBackStackEntryCount() > 0) {
+            Log.i("MainActivity", "popping backstack");
+            fm.popBackStack();
+        } else {
+            Log.i("MainActivity", "nothing on backstack, calling super");
+            super.onBackPressed();
+        }
+        return true;
+    }
 }
+

@@ -4,178 +4,190 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="mx.com.sisei.www.sisei.fragments.ProfileFragment">
-
-    <FrameLayout
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/profile_banner_heigth">
-
-
-        <ImageView
-            android:src="@drawable/backoriginal"
-            android:scaleType="fitXY"
-            android:id="@+id/profile_banner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-        />
-
-        <ImageView
-            android:layout_gravity="bottom"
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/profile_gradient_banner_heigth"
-            android:src="@drawable/picture_gradient" />
-
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:layout_width="@dimen/med_icon_size"
-            android:layout_height="@dimen/med_icon_size"
-            />
-
-
-        <TextView
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textColor="#CDCDCD"
-            android:text="Error :V"
-            android:paddingBottom="@dimen/activity_horizontal_margin"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:id="@+id/profile_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </FrameLayout>
-    <RelativeLayout
-        android:id="@+id/dinamicas_button"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/scene_layout"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:padding="@dimen/nav_header_vertical_spacing"
-            >
-            <TextView
-                android:text="Carnet:"
-                android:layout_weight=".5"
+            android:layout_height="match_parent">
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"    />
-            <TextView
-                android:id="@+id/carnet_type"
-                android:layout_weight=".5"
+                android:layout_height="@dimen/profile_banner_heigth">
+
+
+                <ImageView
+                    android:src="@drawable/backoriginal"
+                    android:scaleType="fitXY"
+                    android:id="@+id/profile_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:layout_gravity="bottom"
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gradient_banner_heigth"
+                    android:src="@drawable/picture_gradient" />
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_width="@dimen/med_icon_size"
+                    android:layout_height="@dimen/med_icon_size"
+                    />
+
+
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="#CDCDCD"
+                    android:text="Error :V"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <RelativeLayout
+                android:id="@+id/dinamicas_button"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-            <ImageView
-                android:src="@drawable/ic_poll_black_24dp"
-                android:layout_width="@dimen/mini_icon_size"
-                android:layout_height="@dimen/mini_icon_size" />
-            <TextView
-                android:id="@+id/carnet_status"
-                android:layout_weight=".4"
+                android:layout_height="60dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/nav_header_vertical_spacing"
+                    >
+                    <TextView
+                        android:text="Carnet:"
+                        android:layout_weight=".5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"    />
+                    <TextView
+                        android:id="@+id/carnet_type"
+                        android:layout_weight=".5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:src="@drawable/ic_poll_black_24dp"
+                        android:layout_width="@dimen/mini_icon_size"
+                        android:layout_height="@dimen/mini_icon_size" />
+                    <TextView
+                        android:id="@+id/carnet_status"
+                        android:layout_weight=".4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:background="@color/orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        android:text="Buscar Dinámicas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="@dimen/profile_point_heigth"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/profile_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/azulClaro"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/profile_points_image"
+                        android:layout_width="102dp"
+                        android:layout_height="@dimen/med_icon_size"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="@dimen/nav_header_mini_spacing"
+                        android:src="@drawable/puntos" />
+
+                    <TextView
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/profile_points_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profile_badges"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/azulFuerte"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/profile_badges_image"
+                        android:layout_width="@dimen/med_icon_size"
+                        android:layout_height="@dimen/med_icon_size"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="@dimen/nav_header_mini_spacing"
+                        android:src="@drawable/insigniass" />
+
+                    <TextView
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/profile_badges_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/my_qr_button"
+                android:background="@color/background"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="Mi QR"
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minHeight="30dp"
+                    />
+
+                <ImageView
+                    android:src="@drawable/ic_arrow_forward_black_24dp"
+                    android:layout_marginRight="@dimen/nav_header_mini_spacing"
+                    android:layout_gravity="right"
+                    android:layout_width="@dimen/small_icon_size"
+                    android:layout_height="@dimen/small_icon_size" />
+            </LinearLayout>
         </LinearLayout>
-        <RelativeLayout
-            android:background="@color/orange"
-            android:layout_width="match_parent"
-            android:layout_height="60dp">
-            <TextView
-                android:textColor="#FFFFFF"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:text="Buscar Dinámicas"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
-        </RelativeLayout>
-    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/profile_point_heigth"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/profile_points"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/azulClaro"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/profile_points_image"
-                android:layout_width="102dp"
-                android:layout_height="@dimen/med_icon_size"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="@dimen/nav_header_mini_spacing"
-                android:src="@drawable/puntos" />
-
-            <TextView
-                android:textColor="#FFFFFF"
-                android:id="@+id/profile_points_count"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/profile_badges"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/azulFuerte"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/profile_badges_image"
-                android:layout_width="@dimen/med_icon_size"
-                android:layout_height="@dimen/med_icon_size"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="@dimen/nav_header_mini_spacing"
-                android:src="@drawable/insigniass" />
-
-            <TextView
-                android:textColor="#FFFFFF"
-                android:id="@+id/profile_badges_count"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textAlignment="center" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/my_qr_button"
-        android:background="@color/background"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:gravity="center_vertical"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:text="Mi QR"
-            android:layout_weight="4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minHeight="30dp"
-            />
-
-        <ImageView
-            android:src="@drawable/ic_arrow_forward_black_24dp"
-            android:layout_marginRight="@dimen/nav_header_mini_spacing"
-            android:layout_gravity="right"
-            android:layout_width="@dimen/small_icon_size"
-            android:layout_height="@dimen/small_icon_size" />
-    </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

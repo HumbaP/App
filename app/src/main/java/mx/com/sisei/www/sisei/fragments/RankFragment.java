@@ -1,11 +1,17 @@
 package mx.com.sisei.www.sisei.fragments;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +22,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import mx.com.sisei.www.sisei.MainActivity2;
 import mx.com.sisei.www.sisei.R;
 import mx.com.sisei.www.sisei.adapters.RankAdapter;
 import mx.com.sisei.www.sisei.connections.APIClient;
@@ -63,6 +70,7 @@ public class RankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View outView = inflater.inflate(R.layout.fragment_rank, container, false);
+        outView.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.backgroundColor, null));
         ranklist=(RecyclerView) outView.findViewById(R.id.rank_list);
         layoutManager=new LinearLayoutManager(this.getContext());
         APIService service = APIClient.getClient(getString(R.string.server_blood)).create(APIService.class);
@@ -112,6 +120,20 @@ public class RankFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        Toolbar tb=(Toolbar)getActivity().findViewById(R.id.toolbar);
+        tb.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        tb.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm= getActivity().getSupportFragmentManager();
+                FragmentTransaction ft=fm.beginTransaction();
+                EventFragment f=EventFragment.newInstance((MainActivity2)getActivity());
+                ft.add(f, "Event");
+                ft.commit();
+
+            }
+        });
+
     }
 
     @Override

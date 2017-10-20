@@ -25,6 +25,15 @@ public interface APIService {
     @GET("Usuario_controller/me_reset/{fb_id}/Android/{key_one}/{key_two}")
     Call<ResponseBody> me_reset(@Path("fb_id") String fb_id, @Path("key_one") String key_one, @Path("key_two") String key_two);
 
+    //Evento
+    //Talleres
+    @GET("talleres_controller/lista_talleres")
+    Call<ResponseBody> get_workshops();
+
+    @GET("Conferencias_controller/lista_conferencias")
+    Call<ResponseBody> getConferences();
+
+
     /*Eventos*/
     //Intenta resolver una palabra
     @GET("sources/Palabrasocultas_controller/dar_palabra/{fb_id}/Android/{key_one}/{key_two}/{palabra}")

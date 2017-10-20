@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/decoder_height"
+    android:padding="@dimen/nav_header_mini_spacing">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_conference"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/item_conference_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".4"
+                    android:background="@color/badgesProfile" />
+
+                <FrameLayout
+                    android:id="@+id/item_conference_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".6">
+
+                    <TextView
+                        android:id="@+id/item_conference_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/item_conference_icons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:orientation="horizontal">
+                        <!--ImageView
+                            android:id=""
+                            android:layout_width="@dimen/mini_icon_size"
+                            android:layout_height="@dimen/mini_icon_size" />
+                        <ImageView
+                            android:layout_width="@dimen/mini_icon_size"
+                            android:layout_height="@dimen/mini_icon_size" /-->
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_cnoference_logo"
+
+                android:layout_width="@dimen/big_icon_size"
+                android:layout_height="@dimen/big_icon_size"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/conference_image_bottom_padding" />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
